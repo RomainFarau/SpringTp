@@ -3,7 +3,8 @@ package com.bankonet.metier;
 import com.bankonet.report.IReportGenerator;
 
 public class ReportService {
-	public IReportGenerator reportGenerator;
+	private IReportGenerator reportGenerator;
+	private String auteur;
 
 	public ReportService(){
 
@@ -22,7 +23,15 @@ public class ReportService {
 	}
 	
 	public void generate(){
-		reportGenerator.generate();
+		reportGenerator.generate(auteur);
+	}
+	
+	public String getAuteur() {
+		return auteur;
+	}
+
+	public void setAuteur(String auteur) {
+		this.auteur = auteur;
 	}
 	
 }

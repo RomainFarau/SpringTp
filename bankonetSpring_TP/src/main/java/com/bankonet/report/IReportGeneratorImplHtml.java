@@ -7,4 +7,9 @@ public class IReportGeneratorImplHtml implements IReportGenerator{
 		
 	}
 
+	public void generate(String auteur) {
+		this.generate();
+		System.out.println("->Auteur : "+auteur);
+	}
+
 }

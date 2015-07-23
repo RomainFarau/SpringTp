@@ -8,6 +8,7 @@
 	
 	<bean id="reportService" class="com.bankonet.metier.ReportService">
 		<property name="reportGenerator" ref="htmlReport"></property>
+		<property name="auteur" value="auteur"></property>
 	</bean>
 		
 </beans>

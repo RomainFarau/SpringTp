@@ -7,4 +7,9 @@ public class IReportGeneratorImplPdf implements IReportGenerator{
 		
 	}
 
+	public void generate(String auteur) {
+		this.generate();
+		System.out.println("->Auteur : "+auteur);
+	}
+	
 }
