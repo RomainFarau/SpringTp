@@ -1,9 +1,12 @@
 package com.bankonet.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Client {
 	private int id;
 	private String nom;
 	private String prenom;
+	@Autowired
 	private Adresse adresse;
 	
 	public Client(){}
