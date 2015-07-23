@@ -6,7 +6,7 @@
 	<bean id="pdfReport" class="com.bankonet.report.IReportGeneratorImplPdf"></bean>
 	<bean id="htmlReport" class="com.bankonet.report.IReportGeneratorImplHtml"></bean>
 	
-	<bean id="reportService" class="com.bankonet.metier.ReportService">
+	<bean id="reportService" class="com.bankonet.metier.ReportService" scope="prototype">
 		<property name="reportGenerator" ref="htmlReport"></property>
 		<property name="auteur" value="auteur"></property>
 	</bean>
