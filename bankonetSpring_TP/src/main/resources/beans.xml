@@ -24,7 +24,7 @@
 		<property name="ville" value="ville"></property>
 	</bean>
 
-	<bean id="client" class="com.bankonet.model.Client" scope="prototype" autowire="byType">
+	<bean id="client" class="com.bankonet.model.Client" scope="prototype" autowire="constructor">
 		<property name="nom" value="nom"></property>
 		<property name="prenom" value="prenom"></property>
 		<property name="id" value="1"></property>

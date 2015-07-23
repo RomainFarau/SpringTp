@@ -8,6 +8,11 @@ public class Client {
 	
 	public Client(){}
 	
+	public Client(Adresse pAdresse){
+		this.adresse=pAdresse;
+		
+	}
+	
 	public Client(int pId, String pNom, String pPrenom, Adresse pAdresse){
 		this.id=pId;
 		this.nom=pNom;
