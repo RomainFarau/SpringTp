@@ -3,16 +3,33 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="pdfReport" class="com.bankonet.report.ReportFactory" factory-method="createReport" >
+	<bean id="pdfReport" class="com.bankonet.report.ReportFactory"
+		factory-method="createReport">
 		<constructor-arg value="pdf" />
 	</bean>
-	<bean id="htmlReport" class="com.bankonet.report.ReportFactory" factory-method="createReport">
+	<bean id="htmlReport" class="com.bankonet.report.ReportFactory"
+		factory-method="createReport">
 		<constructor-arg value="html" />
 	</bean>
-	
-	<bean id="reportService" class="com.bankonet.metier.ReportService" scope="prototype">
+
+	<bean id="reportService" class="com.bankonet.metier.ReportService"
+		scope="prototype">
 		<property name="reportGenerator" ref="htmlReport"></property>
 		<property name="auteur" value="auteur"></property>
 	</bean>
-		
+
+	<bean id="adresse" class="com.bankonet.model.Adresse" scope="prototype">
+		<property name="numero" value="0"></property>
+		<property name="rue" value="rue"></property>
+		<property name="ville" value="ville"></property>
+	</bean>
+
+	<bean id="client" class="com.bankonet.model.Client" scope="prototype">
+		<property name="nom" value="nom"></property>
+		<property name="prenom" value="prenom"></property>
+		<property name="id" value="1"></property>
+		<property name="adresse" ref="adresse"></property>
+	</bean>
+
+
 </beans>
