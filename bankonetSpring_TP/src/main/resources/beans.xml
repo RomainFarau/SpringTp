@@ -3,8 +3,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="pdfReport" class="com.bankonet.report.IReportGeneratorImplPdf"></bean>
-	<bean id="htmlReport" class="com.bankonet.report.IReportGeneratorImplHtml"></bean>
+	<bean id="pdfReport" class="com.bankonet.report.ReportFactory" factory-method="createReport" >
+		<constructor-arg value="pdf" />
+	</bean>
+	<bean id="htmlReport" class="com.bankonet.report.ReportFactory" factory-method="createReport">
+		<constructor-arg value="html" />
+	</bean>
 	
 	<bean id="reportService" class="com.bankonet.metier.ReportService" scope="prototype">
 		<property name="reportGenerator" ref="htmlReport"></property>
