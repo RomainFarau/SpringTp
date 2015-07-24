@@ -11,22 +11,22 @@
 	<context:annotation-config />
 
 
-	<!-- bean id="pdfReport" class="com.bankonet.report.ReportFactory"
+	<bean id="pdfReport" class="com.bankonet.report.ReportFactory"
 		factory-method="createReport">
 		<constructor-arg value="pdf" />
-	</bean-->
-	<!-- bean id="htmlReport" class="com.bankonet.report.ReportFactory"
+	</bean>
+	<bean id="htmlReport" class="com.bankonet.report.ReportFactory"
 		factory-method="createReport">
 		<constructor-arg value="html" />
-	</bean-->
+	</bean>
 
-	<!-- bean id="reportService" class="com.bankonet.metier.ReportService"
+	<bean id="reportService" class="com.bankonet.metier.ReportService"
 		scope="prototype">
 		<property name="reportGenerator" ref="htmlReport"></property>
 		<property name="auteur" value="auteur"></property>
-	</bean-->
+	</bean>
 
-	<!-- bean id="adresse" class="com.bankonet.model.Adresse" scope="prototype">
+	<bean id="adresse" class="com.bankonet.model.Adresse" scope="prototype">
 		<property name="numero" value="0"></property>
 		<property name="rue" value="rue"></property>
 		<property name="ville" value="ville"></property>
@@ -35,9 +35,9 @@
 	<bean id="client" class="com.bankonet.model.Client" scope="prototype">
 		<property name="nom" value="nom"></property>
 		<property name="prenom" value="prenom"></property>
-		<property name="id" value="1"></property-->
+		<property name="id" value="1"></property>
 		<!-- property name="adresse" ref="adresse"></property -->
-	<!-- /bean-->
+	</bean>
 
 
 </beans>
