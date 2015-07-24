@@ -2,10 +2,12 @@ package com.bankonet.metier;
 
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import com.bankonet.dao.ClientDaoImpl;
+
 import com.bankonet.dao.IClientDao;
 import com.bankonet.model.Client;
 
@@ -15,11 +17,11 @@ import com.bankonet.model.Client;
 @Scope("prototype")
 public class BankonetMetierImpl implements IBankonetMetier{
 	
-	
+	@Resource(name="clientDao")
 	private IClientDao clientDao;
 	
 	public BankonetMetierImpl(){
-		clientDao=new ClientDaoImpl();
+		
 	}
 	
 	public void addClient(Client c) {

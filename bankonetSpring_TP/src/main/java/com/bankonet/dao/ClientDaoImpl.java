@@ -2,8 +2,14 @@ package com.bankonet.dao;
 
 import java.util.List;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Repository;
+
 import com.bankonet.model.Client;
 
+
+@Repository("clientDao")
+@Scope("singleton")
 public class ClientDaoImpl implements IClientDao{
 
 	public void addClient(Client c) {
