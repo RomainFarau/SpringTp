@@ -49,7 +49,6 @@ public class BankonetMetierImpl implements IBankonetMetier{
 		return clientDao.chercherClients(motCle);
 	}
 
-	@Override
 	public List<Client> SupprimerClientDontLeNomContient(String mot_cle) {
 		List<Client> clients= clientDao.chercherClients(mot_cle);
 		if(clients!=null){

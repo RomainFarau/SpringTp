@@ -1,9 +1,11 @@
 package com.bankonet.model;
 
+import javax.persistence.Embeddable;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
-
+@Embeddable
 @Component("adresse")
 @Scope("prototype")
 public class Adresse {

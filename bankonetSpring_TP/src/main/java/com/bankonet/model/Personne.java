@@ -1,14 +1,32 @@
 package com.bankonet.model;
 
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DISCRIMINATOR")
 @Component("personne")
 @Scope("prototype")
 public class Personne {
+	
+	@Id
+	@GeneratedValue
 	private int id;
+	@NotNull
+	@Size(min=3,max=60)
 	private String nom;
+	@Size(min=3,max=60)
 	private String prenom;
 	
 	public Personne(){}

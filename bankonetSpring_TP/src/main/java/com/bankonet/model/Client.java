@@ -1,17 +1,30 @@
 package com.bankonet.model;
 
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+@Entity
+@DiscriminatorValue("C")
 @Component("client")
 @Scope("prototype")
 public class Client extends Personne{
 	
 	@Autowired
+	@Embedded
 	private Adresse adresse;
+	@NotNull
+	@Size(min=2,max=16)
 	private String login;
+	@NotNull
+	@Size(min=6,max=50)
 	private String motDePasse;
 	
 	public Client(){}
