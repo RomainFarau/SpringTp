@@ -2,12 +2,12 @@ package com.bankonet.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Client {
-	private int id;
-	private String nom;
-	private String prenom;
+public class Client extends Personne{
+	
 	@Autowired
 	private Adresse adresse;
+	private String login;
+	private String motDePasse;
 	
 	public Client(){}
 	
@@ -16,16 +16,30 @@ public class Client {
 		
 	}
 	
-	public Client(int pId, String pNom, String pPrenom, Adresse pAdresse){
-		this.id=pId;
-		this.nom=pNom;
-		this.prenom=pPrenom;
+	public Client(int pId, String pNom, String pPrenom, Adresse pAdresse, String pLogin, String pMdp){
+		super(pId,pNom,pPrenom);
 		this.adresse=pAdresse;
+		this.login=pLogin;
+		this.motDePasse=pMdp;
 	}
 	
-	public int getId() {
-		return id;
+	
+	public String getLogin() {
+		return login;
 	}
+
+	public void setLogin(String login) {
+		this.login = login;
+	}
+
+	public String getMotDePasse() {
+		return motDePasse;
+	}
+
+	public void setMotDePasse(String motDePasse) {
+		this.motDePasse = motDePasse;
+	}
+
 	public Adresse getAdresse() {
 		return adresse;
 	}
@@ -34,27 +48,15 @@ public class Client {
 		this.adresse = adresse;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getNom() {
-		return nom;
-	}
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	public String getPrenom() {
-		return prenom;
-	}
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
-	}
+	
 	
 	public String toString(){
 		return "id : "+Integer.toString(getId())+
 				", nom : "+getNom()+
 				", prenom : "+getPrenom()+
-				","+adresse.toString();
+				", "+adresse.toString()+
+				", "+getLogin()+
+				", "+getMotDePasse();
 	}
 	
 }
