@@ -31,8 +31,7 @@ public class Personne {
 	
 	public Personne(){}
 	
-	public Personne(int pId, String pNom, String pPrenom){
-		this.id=pId;
+	public Personne(String pNom, String pPrenom){
 		this.nom=pNom;
 		this.prenom=pPrenom;
 	}

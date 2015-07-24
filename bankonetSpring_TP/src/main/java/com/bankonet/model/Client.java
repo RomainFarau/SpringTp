@@ -34,8 +34,8 @@ public class Client extends Personne{
 		
 	}
 	
-	public Client(int pId, String pNom, String pPrenom, Adresse pAdresse, String pLogin, String pMdp){
-		super(pId,pNom,pPrenom);
+	public Client(String pNom, String pPrenom, Adresse pAdresse, String pLogin, String pMdp){
+		super(pNom,pPrenom);
 		this.adresse=pAdresse;
 		this.login=pLogin;
 		this.motDePasse=pMdp;
@@ -74,7 +74,7 @@ public class Client extends Personne{
 				", prenom : "+getPrenom()+
 				", "+adresse.toString()+
 				", "+getLogin()+
-				", "+getMotDePasse();
+				", "+getMotDePasse()+"\n";
 	}
 	
 }
