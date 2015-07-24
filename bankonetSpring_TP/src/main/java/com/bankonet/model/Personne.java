@@ -1,5 +1,11 @@
 package com.bankonet.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+
+@Component("personne")
+@Scope("prototype")
 public class Personne {
 	private int id;
 	private String nom;

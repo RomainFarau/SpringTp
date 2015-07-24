@@ -1,5 +1,11 @@
 package com.bankonet.model;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+
+@Component("adresse")
+@Scope("prototype")
 public class Adresse {
 	
 	private int numero;

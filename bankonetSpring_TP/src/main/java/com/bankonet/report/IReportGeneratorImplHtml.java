@@ -1,5 +1,8 @@
 package com.bankonet.report;
 
+import org.springframework.stereotype.Component;
+
+@Component("htmlReport")
 public class IReportGeneratorImplHtml extends ReportGenerator implements IReportGenerator{
 
 	public void generate() {

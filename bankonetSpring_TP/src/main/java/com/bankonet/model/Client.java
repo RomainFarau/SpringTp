@@ -1,7 +1,12 @@
 package com.bankonet.model;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("client")
+@Scope("prototype")
 public class Client extends Personne{
 	
 	@Autowired
