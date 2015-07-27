@@ -15,8 +15,8 @@ public class Test_TP6 {
 		IBankonetMetier bankonetMetier = (IBankonetMetier) context.getBean("bankonetMetier");
 
 		//bankonetMetier.addClient(new Client("martin","george",null,"geor","notablog"));
-		System.out.println(bankonetMetier.listClients());
-		bankonetMetier.addClient(new Client("toto","tata",new Adresse(36, "avenue Cyrnos", "Paris"),"log2","mdp2"));
+		//System.out.println(bankonetMetier.listClients());
+		//bankonetMetier.addClient(new Client("toto","tata",new Adresse(36, "avenue Cyrnos", "Paris"),"log2","mdp2"));
 		System.out.println(bankonetMetier.listClients());
 	}
 
