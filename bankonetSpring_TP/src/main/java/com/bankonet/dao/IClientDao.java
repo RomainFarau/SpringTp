@@ -6,7 +6,7 @@ import com.bankonet.model.Client;
 
 public interface IClientDao {
 
-	public void addClient(Client c); 
+	public void addClient(Client c) throws Exception; 
 	public List<Client> listClients();
 	public void deleteClient(int idClient);
 	public Client editClient(int idClient);

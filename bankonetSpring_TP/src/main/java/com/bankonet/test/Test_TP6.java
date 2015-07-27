@@ -16,7 +16,21 @@ public class Test_TP6 {
 
 		//bankonetMetier.addClient(new Client("martin","george",null,"geor","notablog"));
 		//System.out.println(bankonetMetier.listClients());
-		//bankonetMetier.addClient(new Client("toto","tata",new Adresse(36, "avenue Cyrnos", "Paris"),"log2","mdp2"));
+		
+		/*AAAAAAAA*/
+		try{
+			bankonetMetier.addClient(new Client("toto","tata",new Adresse(36, "avenue Cyrnos", "Paris"),"log2","mdp2"));
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		/*AAAAAAAA*/
+		
+		/*try {
+			bankonetMetier.addClient(new Client("toto","tata",null,"log2","mdp2"));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 		System.out.println(bankonetMetier.listClients());
 	}
 

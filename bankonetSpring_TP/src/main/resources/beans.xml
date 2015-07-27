@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/aop 
 http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 
-	
+
 
 	<!-- Enable Annotation based Declarative Transaction Management -->
 	<tx:annotation-driven transaction-manager="transactionManager" />
@@ -91,13 +91,12 @@ http://www.springframework.org/schema/aop/spring-aop-3.0.xsd ">
 		<property name="entityManagerFactory" ref="entityManagerFactory"></property>
 	</bean>
 
-	<!-- bean id="logAspect" class="com.bankonet.aspect.LogAspect"></bean-->
-	<aop:aspectj-autoproxy/>
+	<!-- bean id="logAspect" class="com.bankonet.aspect.LogAspect"></bean -->
+	<aop:aspectj-autoproxy />
 
 	<!-- bean id="dao" class="com.bankonet.dao.ClientDaoImpl"> <property name="entityManager"> 
 		<bean class="org.springframework.orm.jpa.support.SharedEntityManagerBean"> 
 		<property name="entityManagerFactory" ref="entityManagerFactory" /> </bean> 
 		</property> </bean -->
-
 
 </beans>
